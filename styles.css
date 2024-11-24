@@ -1,0 +1,1335 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF2F2;
+}
+html{
+    overflow-x: hidden;
+}
+
+
+
+  /* Dashed Horizontal line under the Title */
+  .section-hr {
+    width: 90px;
+    border-top: 3px dashed #1d1d1d; /* Darker shade of blue */
+    margin: 5px auto 30px auto;
+    opacity: 1;
+}
+
+
+
+
+
+
+.navbar-toggler {
+    font-size: 24px; /* Adjust size if needed */
+    position: relative; /* Required for positioning */
+    border: none; /* Remove border */
+    background: transparent; /* Remove background */
+    padding: 0; /* Remove default padding */
+    color: #DB252B;
+}
+
+/* Change the hover effect */
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background: none !important; /* No background on hover */
+    border: none !important; /* Ensure no border on hover */
+    outline: none !important; /* Remove outline if it appears */
+    box-shadow: none !important; /* Remove any box shadow that might appear */
+}
+
+
+.navbar-toggler i {
+    position: relative; /* Required for positioning */
+    top: -9px; /* Move icon up, adjust value as needed */
+    left:-13px;
+    font-weight: bold; /* Make icon bold */
+}
+.navbar-toggler i:hover {
+    background: none !important; /* No background on hover */
+    border: none !important; /* Ensure no border on hover */
+    outline: none; /* Remove outline if it appears */
+}
+
+  .navbar {
+    background: linear-gradient(to bottom, #ffffff 70%, rgba(0, 0, 0, 0) 100%)!important; /* solid red to transparent */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 85px;
+    width: 100%;
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-brand img {
+    vertical-align: middle;
+    margin-top:-20px;
+    padding-left: 20px;
+    /* Optional: Adjust top margin or padding to center-align the logo */
+}
+.nav-link{
+    color: #DB252B;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-top:-20px;
+}
+.nav-link:hover{
+    color: #7a0f13;
+
+}
+   /* Mobile Navbar Styles */
+   .mobile-navbar {
+    position: fixed;
+    top: 0; /* Place it below the header navbar */
+    right: -300px; /* Start hidden off-screen */
+    width: 300px; /* Width of the navbar */
+    height: 100%; /* Full height */
+    background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0)); /* Solid black to transparent */
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 9999!important; /* Above other elements */
+}
+
+.mobile-navbar-content {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.mobile-navbar-content .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Spacing below close button */
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-links li {
+    margin: 25px 0; /* Increased space between links */
+}
+
+.mobile-nav-links .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem; /* Larger text for visibility */
+}
+
+/* Join Us Button */
+.join-us-btn {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 5px 10px; /* Adjust padding to control size */
+    background-color: #D7222E; /* Red color */
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold; /* Make the font bold */
+    font-size: 1.1rem; /* Adjust font size as needed */
+    max-width: 120px; /* Set a maximum width */
+    width: fit-content; /* Ensure the button width fits its content */
+}
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    color: #D7222E; /* White color for icons */
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+
+
+
+/* Submenu item styles */
+.dropdown-menu .dropdown-item {
+    display: block; /* Make links block-level */
+    padding: 8px 15px; /* Add padding */
+    border-radius: 5px; /* Round corners for submenu items */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Change background on hover */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #dddddd; /* Light grey on hover */
+}
+/* Dropdown Menu Styles for Desktop */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position absolutely */
+    background-color: white; /* Background color */
+    border-radius: 5px; /* Round corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    z-index: 9999; /* Ensure it is above other elements */
+    padding: 20px; /* Add padding */
+    width: 400px; /* Set width */
+
+}
+
+/* Show dropdown on click */
+.dropdown.show .dropdown-menu {
+    display: block; /* Show on click */
+}
+
+/* Flexbox for two column layout */
+.dropdown-menu .row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+}
+
+/* Column styles */
+.dropdown-menu .col-6 {
+    padding: 10px; /* Padding inside columns */
+}
+
+/* Submenu item styles */
+.dropdown-item {
+    display: block; /* Make links block-level */
+    padding: 8px 15px; /* Add padding */
+    border-radius: 5px; /* Round corners for submenu items */
+    border: 2px solid #D7222E; /* Always show border around submenu items */
+    margin: 5px 0; /* Space between items */
+}
+
+/* Change background on hover */
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+}
+
+/* Submenu heading styles */
+.dropdown-menu h6 {
+    margin: 0; /* Remove margin */
+    padding: 5px 0; /* Spacing above and below heading */
+    font-weight: bold; /* Make headings bold */
+}
+
+/* Style for desktop hover effect */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show on hover */
+}
+/* Down Arrow Style */
+.down-arrow {
+    font-size: 0.8rem; /* Adjust size */
+    margin-left: 5px; /* Space between text and arrow */
+    color: #ffffff; /* Change to your desired color */
+    vertical-align: middle; /* Align vertically with text */
+}
+
+/* Mobile Submenu Styles */
+.mobile-submenu {
+    padding-left: 35px!important; /* Push submenu to the right */
+    display: none; /* Hidden by default */
+}
+
+/* Show submenu when parent is active */
+.mobile-nav-links li.active .mobile-submenu {
+    display: block; /* Show when active */
+}
+
+/* Active state styling */
+.mobile-nav-links li.active .down-arrow {
+    transform: rotate(180deg); /* Rotate arrow when active */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hero {
+    margin-top: -40px; /* Adjust the value as needed */
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place behind content */
+}
+
+
+
+
+
+
+
+
+
+
+  /* Styles for the bold part */
+  .highlight {
+    font-weight: bold; /* Make text bold */
+    color: #D7222E; /* Change to your desired color */
+  }
+
+/* Center the button for mobile view */
+@media only screen and (max-width: 768px) {
+
+    .about-content {
+        text-align: center; /* Center the text content in mobile */
+    }
+
+    .about {
+        padding-left: 20px;
+        padding-right: 20px; /* 30px padding on left and right, 60px on top and bottom */
+    }
+    
+    .about-content p {
+        font-size: 1rem!important;
+        text-align: justify!important; /* Set paragraph font size to 1rem */
+    }
+    .aboutimg {
+        position: relative; /* Allows positioning adjustments if needed */
+        left: 55%; /* Shift to the right by half the width */
+        right: 50%; /* Shift to the left by half the width */
+        margin-left: -50vw; /* Pull it to the left by half the viewport width */
+        margin-right: -50vw; /* Pull it to the right by half the viewport width */
+        width: 90vw; /* Make the image full viewport width */
+        max-width: none; /* Override any max-width constraints */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Ensure it behaves like a block element */
+    }
+    
+
+}
+
+
+
+
+
+/* Our vision section(big red) */
+.vision-heading {
+    text-align: center; /* Centers the text */
+
+  }
+.highlightt {
+    font-weight: bold; /* Make text bold */
+    color: #ffffff; /* Change to your desired color */
+  }
+.vision-section {
+    background-color: #D7222E;
+    color: white;
+    padding: 50px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .vision-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Increase/decrease for more/less curve height */
+    background: white;
+    border-radius: 50% 50% 0 0; /* Adjust border-radius for a different curve shape */
+    transform: translateY(50%); /* Adjust to move curve up/down */
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .text-content {
+    width: 60%;
+    padding-right: 20px;
+  }
+  
+  .image-content {
+    width: 40%;
+  }
+  
+  .image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .image-content {
+      order: -1; /* Moves the image to the top */
+      width: 100%;
+      margin-bottom: 20px; /* Adds spacing below the image */
+    }
+    .image-content img {
+        max-width: 70%;
+        margin: 0 auto; /* Centers the image horizontally */
+        display: block;
+      }
+  
+    .text-content {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+/* History section */
+  .history-hr{
+    width: 90px;
+    color: #D7222E;
+  }
+  .company-history-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    margin-right: -20px; /* Push image to the right edge */
+}
+
+.content-column {
+    flex: 2;
+    padding: 0 20px;
+}
+
+.image-column {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.image-column img {
+    width: 100%;
+    object-fit: cover;
+    margin-right: 0;
+    display: block;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .company-history-section {
+        flex-direction: column-reverse; /* Reorder: image on top */
+        padding: 0;
+        margin: 0;
+    }
+
+    .image-column img {
+        width: 100%;
+        margin: 0;
+    }
+
+    .content-column {
+        padding: 20px;
+    }
+}
+
+
+
+
+
+
+  .history-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    margin-left: -20px; /* Adjust to push the image to the edge */
+}
+
+.left-column {
+    flex: 1;
+    margin-right: 20px;
+    display: block; /* Ensures image block display */
+}
+
+.left-column img {
+    width: 100%; /* Ensures image takes up full width of its column */
+    object-fit: cover;
+    margin-left: 0;
+}
+
+.right-column {
+    flex: 2;
+    padding: 0 20px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .history-section {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .left-column img {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .right-column {
+        padding: 20px;
+        padding-left: 50px;
+       
+    }
+}
+/* Desktop view */
+@media (min-width: 769px) {
+    .right-column{
+        margin-right:14%;
+    }
+    .content-column{
+        margin-left:14%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.values-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.slider-nav {
+    margin: 20px 0;
+    position: relative; /* To position the line correctly */
+}
+
+.slider-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    color: #333;
+    font-weight: bold;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    position: relative; /* To allow positioning of the line */
+    z-index: 1; /* Keep the button above the line */
+}
+
+.slider-btn:hover {
+    background-color: #999;
+}
+
+/* Line through the circles */
+.slider-nav::before {
+    content: '';
+    position: absolute;
+    top: 50%; /* Adjust to position vertically */
+    left: 0; /* Start from the left edge */
+    right: 0; /* End at the right edge */
+    height: 2px; /* Control line height */
+    background-color: #888686; /* Line color */
+    z-index: 0; /* Place below the buttons */
+}
+
+/* Control the line width using a CSS variable */
+:root {
+    --line-width: 60%; /* Adjust this to control the width of the line */
+}
+
+.slider-nav::before {
+    width: var(--line-width); /* Use the CSS variable for line width */
+    margin: 0 auto; /* Center the line */
+}
+
+.slider-content {
+    font-size: 0.9rem;
+    text-align: left;
+    margin-top: 20px;
+}
+/* Styles for the images above the numbers */
+.value-image {
+    display: none; /* Hide all images initially */
+    position: absolute; /* Position them above the numbers */
+    bottom: 60px; /* Adjust based on your design */
+    left: 50%;
+    transform: translateX(-50%); /* Center the images above the buttons */
+    width: 50px; /* Adjust the size as necessary */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 2; /* Ensure images are above the buttons */
+}
+
+
+
+
+
+
+
+
+
+
+.divisions-section {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(227, 227, 227);
+}
+
+.division {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px; /* Space between divisions */
+}
+
+.division-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Adds space below image for mobile */
+}
+
+.division-content {
+    text-align: left;
+}
+
+.division h3 {
+    font-weight: bold;
+    margin: 0; /* Remove any default margin */
+}
+
+.division p {
+    margin-top: 10px; /* Space between h3 and p */
+}
+
+/* Desktop view */
+@media (min-width: 769px) {
+    .division {
+        flex-direction: row-reverse; /* Reverses the order of content on desktop */
+        align-items: flex-start; /* Align image and text content to the top */
+        text-align: left;
+    }
+    
+    .division-image {
+        width: 30%; /* Adjust image width for desktop */
+        margin-right: 0;
+    }
+    
+    .division-content {
+        width: 60%; /* Adjust content width for desktop */
+    }
+}
+.view-details-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}
+/* Mobile view */
+@media (max-width: 768px) {
+    /* Center button only */
+    .division .view-details-btn {
+        display: block;
+        margin: 10px auto; /* Centers button on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Basic styling */
+/* why-choose-us */
+.choose-hr{
+    color: #D7222E;
+    width: 99px;
+    margin-top: -5px;
+}
+.why-choose-us {
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background: #ffffff;
+    border-radius: 15px; /* Slightly rounded corners */
+    padding: 30px;
+    width: 650px;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  }
+  
+  .card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .background-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -10%;
+    z-index: 5;
+  }
+  
+  /* Desktop styling */
+  @media (min-width: 768px) {
+    .why-choose-us {
+      flex-direction: row;
+    }
+    .image-container {
+      width: 120%;
+      margin-left: -5%;
+    }
+    .background-image {
+      width: 90%; /* Extra width for the overlap effect */
+      border-radius: 15px; /* Slightly rounded corners */
+    }
+  }
+  
+  /* Mobile styling */
+/* Mobile styling */
+@media (max-width: 767px) {
+    .why-choose-us {
+        background-color: #EEEEEE;
+      flex-direction: column-reverse; /* Reverses the order to show the image first */
+    }
+    .card {
+        width:400px;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      margin-top: -20%;
+      z-index: 10;
+    }
+    .background-image {
+      width: 100vw;
+      margin-left: -30vw;
+      top: -10%;
+       border-radius: 15px; /* Slightly rounded corners */
+    }
+  }
+  
+
+  
+
+
+/* Styling for the reversed section */
+.why-choose-us-reversed {
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-reversed {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 600px;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Soft shadow */
+}
+
+.card-reversed h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.card-reversed p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.image-container-reversed {
+    position: relative;
+    width: 50%;
+}
+
+.background-image-reversed {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -10%;
+    z-index: 5;
+}
+
+/* Desktop styling */
+@media (min-width: 768px) {
+    .why-choose-us-reversed {
+        flex-direction: row; /* Image on left, content on right */
+    }
+    .image-container-reversed {
+        width: 100%;
+        margin-right: -20%;
+    }
+    .background-image-reversed {
+        width: 80%; /* Extra width for the overlap effect */
+        border-radius: 15px; /* Slightly rounded corners */
+    }
+}
+
+/* Mobile styling */
+@media (max-width: 767px) {
+    .why-choose-us-reversed {
+        background-color: #EEEEEE;
+      flex-direction: column; /* Stacks elements vertically */
+      align-items: center;
+    }
+    .card-reversed {
+        width: 90%; /* Adjust width to fit smaller screens */
+        border-radius: 15px;
+        padding: 20px;
+        text-align: center;
+        margin-top: -20%;
+        z-index: 10;
+    }
+    .image-container-reversed {
+        width: 100%;
+        position: relative;
+        top: 0;
+        margin: 0;
+    }
+    .background-image-reversed {
+        width: 100vw;
+        margin-left: -5%;
+        top: -10%;
+    }
+}
+
+
+
+
+
+
+/* emilia foundation section */
+.emilia p{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.9rem;
+}
+.quote-style {
+    font-style: italic;
+    font-size: 1rem;
+    color: #555555; /* A subtle gray color */
+    border-left: 4px solid #ccc; /* Left border for quote styling */
+    padding-left: 10px;
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+/* news & media section */
+  .news-media {
+    padding: 60px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+.form-container {
+    max-width: 1200px; /* Maximum width for the container */
+    margin: auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    background-color: #dcd9d9; /* Light background for contrast */
+    border-radius: 10px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.custom-two-column {
+    display: flex;
+    margin: 0; /* No extra margin around the columns */
+}
+
+.custom-left-column {
+    flex: 1; /* Takes equal width */
+    font-size: 0.9rem; /* Font size for left column */
+    padding: 20px; /* Padding for left column */
+}
+
+.custom-right-column {
+    flex: 1; /* Takes equal width */
+    padding: 20px; /* Padding for right column */
+    background-color: #ffffff; /* White background for right column */
+    border-radius: 10px; /* Rounded corners for the column */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.modern-form {
+    display: flex;
+    flex-direction: column; /* Column layout for form elements */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form elements */
+}
+
+.form-input {
+    width: 100%; /* Full width inputs */
+    padding: 5px; /* Increased padding for inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition for focus */
+    background-color: #ffffff; /* White background for inputs */
+    font-size: 1rem; /* Slightly larger font size */
+    color: #333; /* Darker text color */
+    font-family: 'Arial', sans-serif; /* Font family for inputs */
+}
+
+.form-input:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a glow effect */
+}
+
+.form-button {
+    background-color: #007bff; /* Primary button color */
+    color: #fff; /* Text color for button */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Transition for hover effect */
+    font-size: 1rem; /* Button font size */
+    font-weight: bold; /* Bold font for button */
+}
+
+.form-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-two-column {
+        flex-direction: column; /* Stack columns on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+/* CSS for the our offices section */
+#our-offices h5 {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+#our-offices p {
+    margin-bottom: 0;
+}
+
+/* Ensure full-width image and add margin-bottom for spacing */
+.img-fluidd {
+    width: 80%;
+    height: auto;
+    margin-bottom: 40px; /* Add space below the image */
+    display: block; /* Make it a block element to allow centering */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+
+}
+
+/* New red location pin icon */
+.fas.fa-map-pin {
+    color: #eb5204; /* Bright red for the icons */
+}
+
+/* Responsive columns for Our Offices (custom class to avoid conflicts) */
+.office-col {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .office-col {
+        flex: 0 0 50%; /* Two columns in mobile view */
+        max-width: 50%;
+    }
+    .img-fluidd{
+        width: 100%;
+    }
+}
+
+/* Center align text and elements */
+.d-flex {
+    justify-content: center;
+    text-align: center;
+}
+
+.office-underline{
+    width: 300px;
+    height: 4px;
+    background-color: #056579 ;
+}
+/* Desktop view */
+@media (min-width: 769px) {
+
+    .globe{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Desktop view */
+@media (min-width: 769px) {
+
+    .contact-info{
+        max-width: 50%;
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    
+    text-align: center;
+}
+footer p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+footer .contact-info p {
+   text-align: left;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+}
+footer .social-icons a {
+    color: #0073ff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust icon size */
+}
+footer .social-icons a:hover {
+    color: #fff; /* Change color on hover */
+}
+footer .footer-bottom {
+
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+
+.footer-message {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue */
+    border-left: 4px solid #0073ff; /* Blue border */
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer-message p {
+    margin: 0;
+    font-style: italic;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Logo Slider Container */
+/* Adjust logo slide size */
+.logo-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Adjust max width as needed */
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* Flex settings to display multiple logos in desktop view */
+  .logo-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Basic styling for each logo slide */
+  .logo-slide {
+    flex: 1 0 100%; /* Default: full width on smaller screens */
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Mobile-specific styling to ensure headline appears below the logo */
+@media (max-width: 767px) {
+    .logo-slide {
+      flex-direction: column; /* Ensure vertical stacking */
+    }
+  }
+  
+  /* Logo image size */
+  .logo-slide img {
+    width: 90%; /* Set a smaller width for logos */
+    max-width: 300px; /* Optional max width for control */
+  }
+  
+  /* Desktop media query to show 3 logos */
+  @media (min-width: 992px) {
+    .logo-slide {
+      flex: 1 0 33.33%; /* Show 3 logos per view */
+    }
+  }
+  
+  
+/* Company headline with right arrow */
+/* Company headline with thin, taller greater than sign */
+.logo-company-name {
+    display: block; /* Forces the text to appear on a new line */
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.5rem;
+  }
+  
+  .logo-company-name::after {
+    content: "›"; /* Thin, taller greater than sign */
+    color: red; /* Red color for the symbol */
+    margin-left: 8px; /* Space between text and symbol */
+    font-size: 2.0em; /* Adjust symbol size for more height */
+    font-weight: 400; /* Use font-weight 400 for a thinner look */
+    position: relative;
+    top: 5px; /* Adjust this value to move the symbol down */
+}
+
+  
+  
+  
+  /* Arrow Styling */
+  .logo-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .logo-left-arrow {
+    left: 10px;
+    display: none; /* Initially hidden */
+  }
+  
+  .logo-right-arrow {
+    right: 10px;
+  }
+  
+  /* Pagination Dots */
+  .logo-pagination {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .logo-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .logo-dot.active {
+    background-color: #333;
+  }
+  
+
+
+
+
+
+
+
+
+
+  .cookie-policy-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .cookie-policy-container h1,
+  .cookie-policy-container h2 {
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  .cookie-policy-container p {
+    margin-bottom: 16px;
+    text-align: justify;
+  }
+  
+  .cookie-policy-container ul {
+    margin-left: 20px;
+  }
+  
+  .cookie-policy-container ul li {
+    margin-bottom: 10px;
+  }
+  
+  .cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .cookie-table th,
+  .cookie-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .cookie-table th {
+    background-color: #f7f7f7;
+    font-weight: bold;
+  }
+  
+  .cookie-table td {
+    background-color: #fafafa;
+  }
+  

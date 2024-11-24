@@ -1,0 +1,484 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Set a gradient background color */
+    background: linear-gradient(to bottom, #ffffff, #E7E7E9);
+    /* Optional: set a fallback solid color in case the gradient is not supported */
+    background-color: #DFDFDF;
+    overflow-x: hidden;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+
+.csr-content{
+    padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*All Section Title Styling */
+.vision-heading {
+    text-align: center; /* Centers the text */
+
+  }
+.highlightt {
+    font-weight: bold; /* Make text bold */
+    color: #ffffff; /* Change to your desired color */
+  }
+
+  /* Dashed Horizontal line under the Title */
+  .section-hr {
+    width: 90px;
+    border-top: 2px dashed #015085;
+    margin: 5px auto 30px auto;
+  }
+
+
+
+
+
+
+
+
+
+
+/* Sticky Navbar */
+.navbar-toggler {
+    font-size: 24px; /* Adjust size if needed */
+    position: relative; /* Required for positioning */
+    border: none; /* Remove border */
+    background: transparent; /* Remove background */
+    padding: 0; /* Remove default padding */
+    color: #DB252B;
+}
+
+/* Change the hover effect */
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    background: none !important; /* No background on hover */
+    border: none !important; /* Ensure no border on hover */
+    outline: none !important; /* Remove outline if it appears */
+    box-shadow: none !important; /* Remove any box shadow that might appear */
+}
+
+
+.navbar-toggler i {
+    position: relative; /* Required for positioning */
+    top: -9px; /* Move icon up, adjust value as needed */
+    left:-13px;
+    font-weight: bold; /* Make icon bold */
+}
+.navbar-toggler i:hover {
+    background: none !important; /* No background on hover */
+    border: none !important; /* Ensure no border on hover */
+    outline: none; /* Remove outline if it appears */
+}
+
+  .navbar {
+    background: linear-gradient(to bottom, #ffffff 70%, rgba(0, 0, 0, 0) 100%)!important; /* solid red to transparent */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 85px;
+    width: 100%;
+    color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-brand img {
+    vertical-align: middle;
+    margin-top:-20px;
+    /* Optional: Adjust top margin or padding to center-align the logo */
+}
+.nav-link{
+    color: #DB252B;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-top:-20px;
+}
+.nav-link:hover{
+    color: #7a0f13;
+
+}
+   /* Mobile Navbar Styles */
+   .mobile-navbar {
+    position: fixed;
+    top: 0; /* Place it below the header navbar */
+    right: -300px; /* Start hidden off-screen */
+    width: 300px; /* Width of the navbar */
+    height: 100%; /* Full height */
+    background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0)); /* Solid black to transparent */
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 9999!important; /* Above other elements */
+}
+
+.mobile-navbar-content {
+    padding: 20px;
+    color: #ffffff;
+}
+
+.mobile-navbar-content .close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Spacing below close button */
+}
+
+/* Mobile Navigation Links */
+.mobile-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav-links li {
+    margin: 25px 0; /* Increased space between links */
+}
+
+.mobile-nav-links .nav-link {
+    color: #ffffff;
+    font-size: 1.2rem; /* Larger text for visibility */
+}
+
+/* Join Us Button */
+.join-us-btn {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    padding: 5px 10px; /* Adjust padding to control size */
+    background-color: #D7222E; /* Red color */
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold; /* Make the font bold */
+    font-size: 1.1rem; /* Adjust font size as needed */
+    max-width: 120px; /* Set a maximum width */
+    width: fit-content; /* Ensure the button width fits its content */
+}
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px; /* Space between icons */
+    color: #D7222E; /* White color for icons */
+    font-size: 1.5rem; /* Adjust size as needed */
+}
+
+
+
+
+/* Submenu item styles */
+.dropdown-menu .dropdown-item {
+    display: block; /* Make links block-level */
+    padding: 8px 15px; /* Add padding */
+    border-radius: 5px; /* Round corners for submenu items */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 16px; /* Increase font size */
+    font-weight: bold; /* Make the font bold */
+}
+
+/* Change background on hover */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #dddddd; /* Light grey on hover */
+}
+/* Dropdown Menu Styles for Desktop */
+.dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute; /* Position absolutely */
+    background-color: white; /* Background color */
+    border-radius: 5px; /* Round corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+    z-index: 9999; /* Ensure it is above other elements */
+    padding: 20px; /* Add padding */
+    width: 400px; /* Set width */
+
+}
+
+/* Show dropdown on click */
+.dropdown.show .dropdown-menu {
+    display: block; /* Show on click */
+}
+
+/* Flexbox for two column layout */
+.dropdown-menu .row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between columns */
+}
+
+/* Column styles */
+.dropdown-menu .col-6 {
+    padding: 10px; /* Padding inside columns */
+}
+
+/* Submenu item styles */
+.dropdown-item {
+    display: block; /* Make links block-level */
+    padding: 8px 15px; /* Add padding */
+    border-radius: 5px; /* Round corners for submenu items */
+    border: 2px solid #D7222E; /* Always show border around submenu items */
+    margin: 5px 0; /* Space between items */
+}
+
+/* Change background on hover */
+.dropdown-item:hover {
+    background-color: #f0f0f0; /* Light grey on hover */
+}
+
+/* Submenu heading styles */
+.dropdown-menu h6 {
+    margin: 0; /* Remove margin */
+    padding: 5px 0; /* Spacing above and below heading */
+    font-weight: bold; /* Make headings bold */
+}
+
+/* Style for desktop hover effect */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show on hover */
+}
+/* Down Arrow Style */
+.down-arrow {
+    font-size: 0.8rem; /* Adjust size */
+    margin-left: 5px; /* Space between text and arrow */
+    color: #ffffff; /* Change to your desired color */
+    vertical-align: middle; /* Align vertically with text */
+}
+
+/* Mobile Submenu Styles */
+.mobile-submenu {
+    padding-left: 35px!important; /* Push submenu to the right */
+    display: none; /* Hidden by default */
+}
+
+/* Show submenu when parent is active */
+.mobile-nav-links li.active .mobile-submenu {
+    display: block; /* Show when active */
+}
+
+/* Active state styling */
+.mobile-nav-links li.active .down-arrow {
+    transform: rotate(180deg); /* Rotate arrow when active */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Adjust this size as needed for mobile */
+        font-weight: bold;
+    }
+}
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+/* Gallery Styles */
+.gallery-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default to desktop layout */
+    gap: 15px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal for zoomable images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 90px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Image Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Reduced to make it fit better on desktop */
+    max-height: 80vh; /* Ensure image fits within viewport height */
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 50px;    /* Reduced distance from the top */
+    right: 40px;  /* Reduced distance from the right */
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;  /* Ensure it stays above the image */
+}
+
+/* For medium desktops (992px to 1199px) */
+@media (min-width: 772px) {
+    /* Styles specific to medium desktops */
+    .close {
+        right: 550px;  /* Reduced distance from the right */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.top{
+    padding-top: 20px;
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+/* Desktop view */
+@media (min-width: 769px) {
+
+    .contact-info{
+        max-width: 50%;
+    }
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+footer p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+footer .contact-info p {
+   text-align: left;
+}
+
+footer .social-icons {
+    margin-top: 20px;
+}
+footer .social-icons a {
+    color: #0073ff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem; /* Adjust icon size */
+}
+footer .social-icons a:hover {
+    color: #fff; /* Change color on hover */
+}
+footer .footer-bottom {
+
+    font-size: 0.9rem;
+    color: #aaa;
+}
